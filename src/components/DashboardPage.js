@@ -1,8 +1,10 @@
 import React from 'react';
+import App from './App';
+import StockEntered from './StockEntered'
 
 const DashboardPage = () => (
     <div>
-        Dashboard page content
+        <StockEntered />
     </div>
 );
 
