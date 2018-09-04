@@ -7,8 +7,8 @@ class Chart extends React.Component{
     }
     render(){
         return (
-            <div>
-                <Line data={this.props.chartData} />
+            <div style={{width:"90%", height:"70%"}}>
+                <Line data={this.props.chartData}/>
             </div>
 
         );

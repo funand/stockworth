@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 
 const styles ={
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: "black",
+    color: "white",
+    top: "0",
+    width: "100%",
+    border: "1px solid black"
 }
 
 export class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: "Stock Worth"
-        }
-    }
 
     render() {
         return (
-            <div>
-                <h1 style={styles}>{this.state.title}</h1>
+            <div style={styles}>
+                <h1 >StockWorth</h1>
             </div>
         );
     }

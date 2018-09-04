@@ -1,0 +1,1 @@
+import {setSymbol} from './types';
