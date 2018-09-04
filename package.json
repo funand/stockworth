@@ -2,7 +2,7 @@
   "name": "stocks-app",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jacob Sickels",
+  "author": "Prince Ikede",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
