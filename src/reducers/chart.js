@@ -3,7 +3,7 @@ const initialState = {
     companyName: "Kellogg Company",
     chartData: {}
 } 
-
+//add sector, exchange, float value if possible 
 export default (state = initialState, action) => {
     switch(action.type) {
         case "SET_SYMBOL": 

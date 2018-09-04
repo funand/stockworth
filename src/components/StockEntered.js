@@ -15,7 +15,7 @@ class StockEntered extends React.Component{
     }
 
     componentDidMount() {
-        console.log('check');
+        //console.log('check');
         // this.props.getChartData(this.state.symbol);
         this.props.getName('TSLA');
     }

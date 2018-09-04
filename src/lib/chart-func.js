@@ -37,3 +37,5 @@ export const buildChart = (data) => {
 			],
 	};
 }
+
+//gonna add candle stick later with open 

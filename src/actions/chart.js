@@ -43,3 +43,4 @@ export const getChartData = (stock) => {
         }); 
     }  
 }
+//add url to get all time data and store in firebase
