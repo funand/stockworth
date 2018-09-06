@@ -22,6 +22,12 @@ module.exports = (env) => {
             path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
         },
+        node: {
+            console: false,
+            fs: 'empty',
+            net: 'empty',
+            tls: 'empty'
+        },
         module: {
             rules: [{
                 loader: 'babel-loader',
