@@ -16,7 +16,6 @@ export const getName = (stock) => {
         return rp(`https://api.iextrading.com/1.0/stock/${stock}/book`)
             .then((data) => JSON.parse(data))
             .then((data) => {
-                console.log(data);
                 dispatch(setName(data.quote.companyName));
             })
             .catch((error) => {

@@ -10,11 +10,15 @@ const styles ={
 }
 
 export class Header extends Component {
+    constructor(props){
+        super(props);
+    }
 
     render() {
         return (
             <div style={styles}>
-                <h1 >StockWorth</h1>
+            <h1>StockWorth: {this.props.companyName} </h1> 
+            {console.log(this.props.companyName)}
             </div>
         );
     }

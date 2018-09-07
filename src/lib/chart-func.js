@@ -1,17 +1,12 @@
 import moment from 'moment';
 
 export const buildChart = (data) => {
- 
-    console.log(data);
-
     const filteredData = data.map((day) => ({
         date: day.date,
         high: day.high,
         low: day.low,
         close: day.close
     }));
-
-    console.log(filteredData);
     
 	return {
 			labels: filteredData.map((day) => day.date),

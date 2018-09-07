@@ -15,9 +15,7 @@ class StockEntered extends React.Component{
     }
 
     componentDidMount() {
-        //console.log('check');
-        // this.props.getChartData(this.state.symbol);
-        this.props.getName('TSLA');
+        this.props.getName('K');
     }
 
 
@@ -29,24 +27,21 @@ class StockEntered extends React.Component{
 
     updateStockInfo = (e) => {
         this.props.getChartData(this.state.symbol);
+        this.props.getName(this.props.symbol);
     }
 
     render(){
         return(
             <div>
-                <Header />
+                <Header companyName={this.props.companyName} />
                 <form>
                         Enter stock symbol: 
                         <input type="text" onChange={(e) => this.handleChange(e)} value={this.state.symbol}/> 
                         <button type="button" onClick={(e)=> this.updateStockInfo(e)}>Submit</button>
-                    </form>
-                    {
-                        // this.state.symbolChanging && <div>Loading ... </div>
-                        console.log(this.props.chartData)
-                    }
+                </form>
                     {
                         this.props.chartData &&
-                        <Chart chartData={this.props.chartData} />
+                        <Chart chartData={this.props.chartData} companyName ={this.props.companyName}/>
                     }
             </div>
         )
@@ -56,7 +51,8 @@ class StockEntered extends React.Component{
 const mapStateToProps = (state, props) => {  
     return{
         symbol: state.chart.symbol,
-        chartData: state.chart.chartData
+        chartData: state.chart.chartData,
+        companyName: state.chart.companyName
     }; 
 }
 
